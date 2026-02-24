@@ -1,13 +1,13 @@
-"use client";
+'use client';
 
-import { Menu, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { Menu, X } from 'lucide-react';
+import { useEffect, useState } from 'react';
 
 const NAV_ITEMS = [
-  { label: "Home", href: "#home" },
-  { label: "About", href: "#about" },
-  { label: "Projects", href: "#projects" },
-  { label: "Blog", href: "#blog" },
+  { label: 'Home', href: '#home' },
+  { label: 'About', href: '#about' },
+  { label: 'Projects', href: '#projects' },
+  { label: 'Blog', href: '#blog' },
 ];
 
 const Navbar = () => {
@@ -16,8 +16,8 @@ const Navbar = () => {
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40);
-    window.addEventListener("scroll", onScroll);
-    return () => window.removeEventListener("scroll", onScroll);
+    window.addEventListener('scroll', onScroll);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   return (
@@ -26,14 +26,14 @@ const Navbar = () => {
       <div
         className={`hidden sm:flex items-center gap-2 px-2 py-2 rounded-full border border-border/60 transition-all duration-300 ${
           scrolled
-            ? "bg-card/90 backdrop-blur-xl shadow-lg"
-            : "bg-card/70 backdrop-blur-md"
+            ? 'bg-card/90 backdrop-blur-xl shadow-lg'
+            : 'bg-card/70 backdrop-blur-md'
         }`}
       >
         {/* Avatar */}
         <div className="w-9 h-9 rounded-full bg-muted overflow-hidden flex-shrink-0">
           <div className="w-full h-full bg-linear-to-br from-muted-foreground/30 to-muted-foreground/10 flex items-center justify-center text-xs text-muted-foreground font-mono">
-            JD
+            ND
           </div>
         </div>
 
@@ -63,8 +63,8 @@ const Navbar = () => {
       <div
         className={`sm:hidden fixed top-4 right-4 flex items-center gap-2 px-2 py-2 rounded-full border border-border/60 transition-all duration-300 ${
           scrolled
-            ? "bg-card/90 backdrop-blur-xl shadow-lg"
-            : "bg-card/70 backdrop-blur-md"
+            ? 'bg-card/90 backdrop-blur-xl shadow-lg'
+            : 'bg-card/70 backdrop-blur-md'
         }`}
       >
         <div className="w-8 h-8 rounded-full bg-muted overflow-hidden flex-shrink-0">

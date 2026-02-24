@@ -1,4 +1,4 @@
-import { ArrowUpRight } from "lucide-react";
+import { ArrowUpRight } from 'lucide-react';
 
 const HeroSection = () => {
   return (
@@ -14,8 +14,8 @@ const HeroSection = () => {
           </div>
 
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1] mb-6">
-            I'm John Doe,
-            <br />a{" "}
+            I'm Natnael D.
+            <br />a{' '}
             <span className="relative inline-block">
               <span className="relative z-10">frontend engineer.</span>
               <svg
@@ -60,7 +60,7 @@ const HeroSection = () => {
         <div className="flex justify-center md:justify-end">
           <div className="relative">
             {/* Rotating badge */}
-            <div className="absolute -top-6 -right-6 z-10 w-20 h-20">
+            <div className="absolute -top-6 -right-6 z-10 w-28 h-28">
               <div className="relative w-full h-full animate-spin-slow">
                 <svg viewBox="0 0 100 100" className="w-full h-full">
                   <defs>
@@ -69,7 +69,7 @@ const HeroSection = () => {
                       d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
                     />
                   </defs>
-                  <text className="fill-muted-foreground text-[11px] font-mono uppercase tracking-[0.3em]">
+                  <text className="fill-muted-foreground text-[9px] font-mono uppercase tracking-[0.35em]">
                     <textPath href="#circlePath">
                       ✦ Available ✦ For Freelance ✦
                     </textPath>

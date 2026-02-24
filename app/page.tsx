@@ -1,6 +1,7 @@
-import ExperienceSection from "@/components/Experience";
-import HeroSection from "@/components/HeroSection";
-import Navbar from "@/components/Navbar";
+import ExperienceSection from '@/components/Experience';
+import HeroSection from '@/components/HeroSection';
+import Navbar from '@/components/Navbar';
+import ProjectsSection from '@/components/Projects';
 
 export default function Home() {
   return (
@@ -9,6 +10,7 @@ export default function Home() {
       <div className="pt-32 px-6 max-w-6xl mx-auto">
         <HeroSection />
         <ExperienceSection />
+        <ProjectsSection />
       </div>
     </div>
   );
