@@ -92,10 +92,10 @@ const HeroSection = () => {
               <div className="flex items-end justify-between px-1 pb-1">
                 <div>
                   <p className="text-sm font-bold text-foreground font-mono">
-                    JOHN DOE
+                    Natnael
                   </p>
                   <p className="text-[11px] text-muted-foreground font-mono">
-                    ENGINEER + AUTOMATION
+                    DEVELOPMENT + AUTOMATION
                   </p>
                 </div>
                 <span className="text-xs text-muted-foreground font-mono">
