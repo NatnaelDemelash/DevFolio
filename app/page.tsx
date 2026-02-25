@@ -1,3 +1,4 @@
+import ConnectSection from '@/components/Connect';
 import ExperienceSection from '@/components/Experience';
 import HeroSection from '@/components/HeroSection';
 import Navbar from '@/components/Navbar';
@@ -13,6 +14,7 @@ export default function Home() {
         <SkillsSection />
         <ExperienceSection />
         <ProjectsSection />
+        <ConnectSection />
       </div>
     </div>
   );
