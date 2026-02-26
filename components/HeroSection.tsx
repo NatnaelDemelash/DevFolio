@@ -1,126 +1,103 @@
-import { ArrowUpRight } from 'lucide-react';
+"use client";
+
+import { ArrowUpRight, Sparkles, Zap } from "lucide-react";
 
 const HeroSection = () => {
   return (
-    <section id="hero" className="min-h-[90vh] flex items-center px-6 pt-24">
-      <div className="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
-        {/* Left — Text */}
-        <div>
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full border border-border bg-card/50 mb-8">
-            <span className="text-primary text-sm">✦</span>
-            <span className="text-sm text-muted-foreground font-medium">
-              Hello!
-            </span>
+    <section id="hero" className="relative overflow-hidden pt-24 sm:pt-28">
+      {/* Soft background */}
+      <div className="pointer-events-none absolute inset-0">
+        <div className="absolute -top-48 left-1/2 h-[640px] w-[640px] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
+        <div className="absolute -bottom-48 left-[-180px] h-[560px] w-[560px] rounded-full bg-muted/40 blur-3xl" />
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.10),transparent_55%)] dark:bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.06),transparent_55%)]" />
+      </div>
+
+      <div className="relative mx-auto max-w-6xl px-6">
+        <div className="flex min-h-[88vh] flex-col items-center justify-center text-center">
+          {/* Small avatar */}
+          <div className="relative">
+            <div className="h-20 w-20 rounded-3xl border border-border bg-card/70 shadow-sm backdrop-blur flex items-center justify-center">
+              <span className="text-4xl">👋</span>
+            </div>
+            <span className="absolute -bottom-1 -right-1 h-3.5 w-3.5 rounded-full bg-emerald-500 ring-2 ring-background" />
           </div>
 
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground leading-[1.1] mb-6">
-            I'm Natnael D.
-            <br />a{' '}
-            <span className="relative inline-block">
-              <span className="relative z-10">frontend engineer.</span>
-              <svg
-                className="absolute -bottom-1 left-0 w-full"
-                viewBox="0 0 200 12"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M2 8C30 2 60 4 100 6C140 8 170 3 198 7"
-                  stroke="hsl(var(--primary))"
-                  strokeWidth="3"
-                  strokeLinecap="round"
-                  className="opacity-60"
-                />
-                <path
-                  d="M5 10C40 5 80 7 120 5C160 3 185 8 195 6"
-                  stroke="hsl(var(--primary))"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  className="opacity-40"
-                />
-              </svg>
-            </span>
+          {/* Badge */}
+          <div className="mt-6 inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1.5 text-xs text-muted-foreground shadow-sm backdrop-blur">
+            <Sparkles className="h-3.5 w-3.5" />
+            Available for freelance • Frontend + Automation
+          </div>
+
+          {/* Headline */}
+          <h1 className="mt-6 text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
+            Hi, I’m Natnael.
           </h1>
 
-          <p className="text-lg text-muted-foreground max-w-md mb-8 leading-relaxed">
-            I'm a freelance frontend engineer & n8n automation specialist. I'm
-            very passionate about the work that I do.
+          <p className="mt-2 text-2xl font-semibold tracking-tight text-foreground/80 sm:text-3xl">
+            I build clean interfaces—
+            <span className="relative inline-block">
+              <span className="relative z-10">
+                and automation that saves time
+              </span>
+              <span className="absolute -bottom-1 left-0 right-0 h-2 rounded-full bg-primary/15" />
+            </span>
+            .
           </p>
 
-          <a
-            href="#projects"
-            className="group inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border-2 border-foreground text-foreground font-semibold text-sm hover:bg-foreground hover:text-background transition-all duration-300"
-          >
-            See My Works
-            <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-          </a>
-        </div>
+          {/* Supporting copy */}
+          <p className="mt-5 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+            I help teams ship premium Next.js frontends and n8n workflows that
+            remove repetitive work. Fast, polished, and easy to maintain.
+          </p>
 
-        {/* Right — Photo card (Theo Lansdale style) */}
-        <div className="flex justify-center md:justify-end">
-          <div className="relative">
-            {/* Rotating badge */}
-            <div className="absolute -top-6 -right-6 z-10 w-28 h-28">
-              <div className="relative w-full h-full animate-spin-slow">
-                <svg viewBox="0 0 100 100" className="w-full h-full">
-                  <defs>
-                    <path
-                      id="circlePath"
-                      d="M 50,50 m -37,0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"
-                    />
-                  </defs>
-                  <text className="fill-muted-foreground text-[9px] font-mono uppercase tracking-[0.35em]">
-                    <textPath href="#circlePath">
-                      ✦ Available ✦ For Freelance ✦
-                    </textPath>
-                  </text>
-                </svg>
-              </div>
-              <ArrowUpRight className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-5 h-5 text-foreground" />
+          {/* CTAs */}
+          <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row">
+            <a
+              href="#projects"
+              className="group inline-flex items-center justify-center gap-2 rounded-2xl bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition hover:opacity-90"
+            >
+              See my work
+              <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            </a>
+            <a
+              href="#connect"
+              className="inline-flex items-center justify-center gap-2 rounded-2xl border border-border bg-card/70 px-6 py-3 text-sm font-semibold text-foreground shadow-sm backdrop-blur transition hover:bg-card"
+            >
+              Let’s talk
+              <ArrowUpRight className="h-4 w-4" />
+            </a>
+          </div>
+
+          {/* Attention grab: proof chips */}
+          <div className="mt-10 grid w-full max-w-3xl grid-cols-1 gap-3 sm:grid-cols-3">
+            <div className="rounded-2xl border border-border bg-card/70 p-4 shadow-sm backdrop-blur">
+              <p className="text-xs text-muted-foreground">What I deliver</p>
+              <p className="mt-1 text-sm font-semibold text-foreground">
+                UI that feels premium
+              </p>
             </div>
-
-            {/* Photo card */}
-            <div className="w-64 md:w-72 rounded-xl border-2 border-border bg-card p-3 shadow-xl">
-              <div className="aspect-[3/4] rounded-lg bg-secondary overflow-hidden mb-3">
-                {/* Placeholder — replace with your photo */}
-                <div className="w-full h-full bg-gradient-to-br from-muted-foreground/20 to-muted-foreground/5 flex items-center justify-center">
-                  <span className="text-6xl text-muted-foreground/30 font-bold font-mono">
-                    ND
-                  </span>
-                </div>
-              </div>
-              <div className="flex items-end justify-between px-1 pb-1">
-                <div>
-                  <p className="text-sm font-bold text-foreground font-mono">
-                    Natnael
-                  </p>
-                  <p className="text-[11px] text-muted-foreground font-mono">
-                    DEVELOPMENT + AUTOMATION
-                  </p>
-                </div>
-                <span className="text-xs text-muted-foreground font-mono">
-                  2026
+            <div className="rounded-2xl border border-border bg-card/70 p-4 shadow-sm backdrop-blur">
+              <p className="text-xs text-muted-foreground">Automation</p>
+              <p className="mt-1 text-sm font-semibold text-foreground">
+                n8n + Slack + Jira
+              </p>
+            </div>
+            <div className="rounded-2xl border border-border bg-card/70 p-4 shadow-sm backdrop-blur">
+              <p className="text-xs text-muted-foreground">Speed</p>
+              <p className="mt-1 text-sm font-semibold text-foreground inline-flex items-center gap-2">
+                Ship fast
+                <span className="inline-flex items-center gap-1 rounded-xl border border-border bg-background/60 px-2 py-1 text-[10px] font-mono text-muted-foreground">
+                  <Zap className="h-3 w-3" />
+                  weeks, not months
                 </span>
-              </div>
+              </p>
             </div>
+          </div>
 
-            {/* Decorative elements */}
-            <div className="absolute -bottom-4 -left-8 text-muted-foreground/30">
-              <svg width="48" height="24" viewBox="0 0 48 24" fill="none">
-                <path
-                  d="M2 12C8 6 14 6 20 12C26 18 32 18 38 12C44 6 48 6 48 12"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  fill="none"
-                />
-                <path
-                  d="M2 18C8 12 14 12 20 18C26 24 32 24 38 18C44 12 48 12 48 18"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  fill="none"
-                />
-              </svg>
-            </div>
+          {/* Micro-scroll hint */}
+          <div className="mt-10 flex items-center gap-2 text-xs text-muted-foreground">
+            <span className="h-1.5 w-1.5 rounded-full bg-muted-foreground/50" />
+            Scroll to see projects
           </div>
         </div>
       </div>
