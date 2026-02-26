@@ -1,94 +1,120 @@
-import {
-  Code2,
-  Palette,
-  Globe,
-  Layers,
-  Wind,
-  Workflow,
-  PenTool,
-  Plug,
-  Webhook,
-} from 'lucide-react';
+"use client";
 
-const tools = [
+import {
+  CheckSquare,
+  Code2,
+  GitBranch,
+  Globe,
+  MessageSquare,
+  Package,
+  Workflow,
+  Zap,
+} from "lucide-react";
+
+const skillCategories = [
   {
-    name: 'React',
-    desc: 'UI library for building interfaces',
-    icon: Globe,
-    // color: 'bg-sky-100',
+    label: "Frontend",
+    tools: [
+      {
+        name: "React",
+        desc: "For building fast, interactive UIs",
+        icon: Globe,
+      },
+      {
+        name: "Next.js",
+        desc: "React framework with routing & SSR",
+        icon: Package,
+      },
+      {
+        name: "TypeScript",
+        desc: "Typed JavaScript for safer code",
+        icon: Code2,
+      },
+    ],
   },
   {
-    name: 'TypeScript',
-    desc: 'Typed superset of JavaScript',
-    icon: Code2,
-    // color: 'bg-blue-100',
+    label: "Backend",
+    tools: [
+      {
+        name: "Node.js",
+        desc: "JavaScript runtime for servers",
+        icon: Code2,
+      },
+    ],
   },
   {
-    name: 'JavaScript',
-    desc: 'Programming language of the web',
-    icon: Layers,
-    // color: 'bg-yellow-100',
+    label: "Tools & DevOps",
+    tools: [
+      {
+        name: "Git & GitHub",
+        desc: "Version control and collaboration",
+        icon: GitBranch,
+      },
+      {
+        name: "Slack",
+        desc: "Team communication platform",
+        icon: MessageSquare,
+      },
+      {
+        name: "Jira",
+        desc: "Project management and tracking",
+        icon: CheckSquare,
+      },
+    ],
   },
   {
-    name: 'Next.js',
-    desc: 'Full-stack React framework',
-    icon: Globe,
-    // color: 'bg-neutral-200',
-  },
-  {
-    name: 'TailwindCSS',
-    desc: 'Utility-first CSS framework',
-    icon: Wind,
-    // color: 'bg-cyan-100',
-  },
-  {
-    name: 'Framer Motion',
-    desc: 'Animation library for React',
-    icon: Palette,
-    // color: 'bg-purple-100',
-  },
-  {
-    name: 'n8n',
-    desc: 'Workflow automation tool',
-    icon: Workflow,
-    // color: 'bg-pink-100',
-  },
-  {
-    name: 'API Integrations',
-    desc: 'Connect external services',
-    icon: Plug,
-    // color: 'bg-indigo-100',
+    label: "Automation & Workflow",
+    tools: [
+      {
+        name: "n8n",
+        desc: "Workflow automation platform",
+        icon: Workflow,
+      },
+      {
+        name: "API Integrations",
+        desc: "Connect and automate services",
+        icon: Zap,
+      },
+    ],
   },
 ];
 
-const SkillsSection = () => {
+export default function Skills() {
   return (
-    <section id="skills" className="py-24 px-6">
+    <section id="skills" className="py-24 px-8 ">
       <div className="max-w-6xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-12">
-          Tech Stack{' '}
-          <span className="inline-block w-8 h-0.5 bg-muted-foreground align-middle ml-3" />
+        <h2 className="text-3xl md:text-4xl font-bold text-white mb-16">
+          What I Use
         </h2>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-          {tools.map((tool, i) => (
-            <div
-              key={tool.name}
-              className="flex items-center gap-4 p-5 rounded-xl border border-border bg-card hover:shadow-md hover:-translate-y-0.5 transition-all duration-300 cursor-default animate-fade-in"
-              style={{ animationDelay: `${i * 60}ms` }}
-            >
-              <div
-                className={`w-12 h-12 rounded-xl ${tool} flex items-center justify-center shrink-0`}
-              >
-                <tool.icon className="w-6 h-6 text-foreground/80" />
-              </div>
-              <div>
-                <p className="font-semibold text-foreground text-sm">
-                  {tool.name}
-                </p>
-                <p className="text-xs text-muted-foreground font-mono">
-                  {tool.desc}
-                </p>
+        <div className="space-y-12">
+          {skillCategories.map((category) => (
+            <div key={category.label}>
+              {/* Category Label */}
+              <h3 className="text-sm text-gray-500 uppercase tracking-wider mb-6">
+                {category.label}
+              </h3>
+
+              {/* Tools Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-6">
+                {category.tools.map((tool) => (
+                  <div
+                    key={tool.name}
+                    className="flex items-start gap-4 p-6 rounded-2xl bg-[#222] border border-gray-800 hover:border-gray-700 hover:bg-[#252525] transition-all duration-300"
+                  >
+                    <div className="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center shrink-0">
+                      <tool.icon className="w-6 h-6 text-white/80" />
+                    </div>
+                    <div>
+                      <p className="font-semibold text-white text-base mb-1">
+                        {tool.name}
+                      </p>
+                      <p className="text-sm text-gray-400 leading-relaxed">
+                        {tool.desc}
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </div>
           ))}
@@ -96,6 +122,4 @@ const SkillsSection = () => {
       </div>
     </section>
   );
-};
-
-export default SkillsSection;
+}
