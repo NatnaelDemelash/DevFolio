@@ -5,18 +5,11 @@ import { ArrowUpRight, Sparkles, Zap } from "lucide-react";
 const HeroSection = () => {
   return (
     <section id="hero" className="relative overflow-hidden pt-24 sm:pt-28">
-      {/* Soft background */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-48 left-1/2 h-[640px] w-[640px] -translate-x-1/2 rounded-full bg-primary/10 blur-3xl" />
-        <div className="absolute -bottom-48 left-[-180px] h-[560px] w-[560px] rounded-full bg-muted/40 blur-3xl" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.10),transparent_55%)] dark:bg-[radial-gradient(ellipse_at_top,rgba(255,255,255,0.06),transparent_55%)]" />
-      </div>
-
       <div className="relative mx-auto max-w-6xl px-6">
         <div className="flex min-h-[88vh] flex-col items-center justify-center text-center">
           {/* Small avatar */}
           <div className="relative">
-            <div className="h-20 w-20 rounded-3xl border border-border bg-card/70 shadow-sm backdrop-blur flex items-center justify-center">
+            <div className="h-40 w-40 rounded-3xl border border-border bg-card/70 shadow-sm backdrop-blur flex items-center justify-center">
               <span className="text-4xl">👋</span>
             </div>
             <span className="absolute -bottom-1 -right-1 h-3.5 w-3.5 rounded-full bg-emerald-500 ring-2 ring-background" />
