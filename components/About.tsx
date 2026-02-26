@@ -30,7 +30,7 @@ const AboutSection = () => {
           <div className="rounded-2xl bg-card border border-border p-6 flex items-center justify-center">
             <div className="w-32 h-32 rounded-full bg-secondary flex items-center justify-center">
               <span className="text-5xl text-muted-foreground/40 font-bold font-mono">
-                JD
+                ND
               </span>
             </div>
           </div>

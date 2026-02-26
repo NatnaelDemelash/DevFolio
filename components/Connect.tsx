@@ -60,7 +60,7 @@ const ConnectSection = () => {
 
                   <div className="flex items-center gap-2">
                     <a
-                      href="mailto:hello@example.com?subject=Hello%20Jordan%20%E2%80%94%20Let%27s%20talk"
+                      href="mailto:hello@example.com?subject=Hello%Natnael94%20Let%27s%20talk"
                       className="inline-flex items-center justify-center rounded-2xl bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm transition hover:opacity-90"
                     >
                       Email me
@@ -87,14 +87,6 @@ const ConnectSection = () => {
                       EAT (UTC+3)
                     </p>
                   </div>
-                  <div className="rounded-2xl border border-border bg-background/60 px-4 py-3">
-                    <p className="text-xs text-muted-foreground">
-                      Typical reply
-                    </p>
-                    <p className="mt-1 text-sm font-semibold text-foreground">
-                      24–48 hrs
-                    </p>
-                  </div>
                 </div>
               </div>
             </div>
@@ -109,9 +101,6 @@ const ConnectSection = () => {
                   👨‍💻
                 </div>
                 <div>
-                  <p className="text-sm font-semibold text-foreground">
-                    Hi, I’m Jordan.
-                  </p>
                   <p className="mt-1 text-sm text-muted-foreground">
                     I press buttons and interfaces happen.
                   </p>
@@ -122,7 +111,7 @@ const ConnectSection = () => {
                 <div className="rounded-2xl border border-border bg-background/60 px-4 py-3">
                   <p className="text-xs text-muted-foreground">Focus</p>
                   <p className="mt-1 text-sm font-semibold text-foreground">
-                    Product UI
+                    Automation Development
                   </p>
                 </div>
                 <div className="rounded-2xl border border-border bg-background/60 px-4 py-3">
@@ -180,9 +169,9 @@ const ConnectSection = () => {
                     <span className="inline-flex items-center gap-2">
                       <X className="h-4 w-4" /> X (Twitter)
                     </span>
-                    <span className="text-xs text-muted-foreground">
+                    {/* <span className="text-xs text-muted-foreground">
                       /jordan
-                    </span>
+                    </span> */}
                   </a>
                   <a
                     href="https://linkedin.com"
@@ -193,9 +182,9 @@ const ConnectSection = () => {
                     <span className="inline-flex items-center gap-2">
                       <Linkedin className="h-4 w-4" /> LinkedIn
                     </span>
-                    <span className="text-xs text-muted-foreground">
+                    {/* <span className="text-xs text-muted-foreground">
                       /in/jordan
-                    </span>
+                    </span> */}
                   </a>
                   <a
                     href="https://github.com"
@@ -206,9 +195,9 @@ const ConnectSection = () => {
                     <span className="inline-flex items-center gap-2">
                       <Github className="h-4 w-4" /> GitHub
                     </span>
-                    <span className="text-xs text-muted-foreground">
+                    {/* <span className="text-xs text-muted-foreground">
                       /jordan
-                    </span>
+                    </span> */}
                   </a>
                 </div>
               </div>
