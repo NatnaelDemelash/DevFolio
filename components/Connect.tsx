@@ -55,12 +55,14 @@ const ConnectSection = () => {
                     <span className="inline-flex h-11 w-11 items-center justify-center rounded-2xl border border-border bg-background/60 shadow-sm">
                       <Mail className="h-5 w-5" />
                     </span>
-                    <span className="break-all">hello@example.com</span>
+                    <span className="break-all text-lg">
+                      natnael.dev101@gmail.com
+                    </span>
                   </a>
 
                   <div className="flex items-center gap-2">
                     <a
-                      href="mailto:hello@example.com?subject=Hello%Natnael94%20Let%27s%20talk"
+                      href="mailto:natnael.dev101@gmail.com?subject=Hello%Natnael94%20Let%27s%20talk"
                       className="inline-flex items-center justify-center rounded-2xl bg-primary px-4 py-2 text-sm font-semibold text-primary-foreground shadow-sm transition hover:opacity-90"
                     >
                       Email me
@@ -240,7 +242,7 @@ const ConnectSection = () => {
           </p>
           <div className="flex items-center gap-2">
             <a
-              href="mailto:hello@example.com"
+              href="mailto:natnael.dev101@gmail.com"
               className="inline-flex items-center gap-2 rounded-2xl border border-border bg-card/70 px-4 py-2 text-xs font-semibold text-foreground shadow-sm backdrop-blur transition hover:bg-card"
             >
               <Mail className="h-4 w-4" />

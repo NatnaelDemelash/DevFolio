@@ -239,9 +239,6 @@ function FeaturedCard({ project }: { project: Project }) {
           </div>
 
           <div className="mt-7 flex items-center justify-between">
-            <span className="text-xs text-muted-foreground">
-              Built for real-world impact
-            </span>
             <span className="inline-flex items-center gap-2 text-sm font-semibold text-foreground transition group-hover:text-primary">
               Explore
               <ArrowUpRight className="h-4 w-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
@@ -257,7 +254,7 @@ const ProjectsSection = () => {
   const [filter, setFilter] = useState<FilterKey>("all");
 
   const featured = useMemo(
-    () => projects.find((p) => p.featured) ?? projects[0],
+    () => projects.find((p) => p.name === "ExplainThisBug") ?? projects[0],
     [],
   );
 
