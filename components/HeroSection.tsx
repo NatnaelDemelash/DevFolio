@@ -1,6 +1,8 @@
 "use client";
 
+import profilePhoto from "@/assets/profile.png";
 import { ArrowUpRight, Sparkles, Zap } from "lucide-react";
+import Image from "next/image";
 
 const HeroSection = () => {
   return (
@@ -9,8 +11,13 @@ const HeroSection = () => {
         <div className="flex min-h-[88vh] flex-col items-center justify-center text-center">
           {/* Small avatar */}
           <div className="relative">
-            <div className="h-40 w-40 rounded-3xl border border-border bg-card/70 shadow-sm backdrop-blur flex items-center justify-center">
-              <span className="text-4xl">👋</span>
+            <div className="h-44 w-44 rounded-full border border-border bg-card/70 shadow-sm backdrop-blur overflow-hidden">
+              <Image
+                src={profilePhoto}
+                alt="Natnael"
+                className="h-full w-full object-cover object-top scale-110"
+                placeholder="blur"
+              />
             </div>
             <span className="absolute -bottom-1 -right-1 h-3.5 w-3.5 rounded-full bg-emerald-500 ring-2 ring-background" />
           </div>

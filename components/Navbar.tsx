@@ -29,48 +29,25 @@ const Navbar = () => {
   const sectionIds = useMemo(() => NAV_ITEMS.map((x) => x.id), []);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 40);
+    const onScroll = () => {
+      const scrollY = window.scrollY + 80;
+
+      const current = sectionIds.reduce<SectionId>((acc, id) => {
+        const el = document.getElementById(id);
+        if (!el) return acc;
+        if (el.offsetTop <= scrollY) return id;
+        return acc;
+      }, "hero");
+
+      if (current !== lastActive.current) {
+        lastActive.current = current;
+        setActive(current);
+      }
+    };
+
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
-  }, []);
-
-  // Active section highlight via IntersectionObserver
-  useEffect(() => {
-    const els = sectionIds
-      .map((id) => document.getElementById(id))
-      .filter(Boolean) as HTMLElement[];
-
-    if (!els.length) return;
-
-    const io = new IntersectionObserver(
-      (entries) => {
-        // Pick the most visible intersecting entry
-        const visible = entries
-          .filter((e) => e.isIntersecting)
-          .sort(
-            (a, b) => (b.intersectionRatio ?? 0) - (a.intersectionRatio ?? 0),
-          );
-
-        const top = visible[0];
-        if (!top?.target?.id) return;
-
-        const next = top.target.id as SectionId;
-        if (next !== lastActive.current) {
-          lastActive.current = next;
-          setActive(next);
-        }
-      },
-      {
-        root: null,
-        // helps highlight when section is in the top-ish area
-        rootMargin: "-35% 0px -55% 0px",
-        threshold: [0.1, 0.2, 0.35, 0.5],
-      },
-    );
-
-    els.forEach((el) => io.observe(el));
-    return () => io.disconnect();
   }, [sectionIds]);
 
   // Lock body scroll when mobile menu open

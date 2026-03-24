@@ -13,9 +13,9 @@ export default function Home() {
       <div className="pt-32 px-6 max-w-6xl mx-auto">
         <HeroSection />
         <AboutSection />
+        <ProjectsSection />
         <SkillsSection />
         <ExperienceSection />
-        <ProjectsSection />
         <ConnectSection />
       </div>
     </div>
