@@ -12,11 +12,10 @@ import {
 import Image, { StaticImageData } from "next/image";
 import React, { useMemo, useState } from "react";
 
-import projectDashboard from "@/assets/project-dashboard.jpg";
-import projectDesignSystem from "@/assets/project-design-system.jpg";
-import projectLandingBuilder from "@/assets/project-landing-builder.jpg";
-import projectLeadGen from "@/assets/project-lead-gen.jpg";
-import projectOnboarding from "@/assets/project-onboarding.jpg";
+import projectCronEase from "@/assets/projectCronEase.png";
+import projectExplainBug from "@/assets/projectExplainBug.png";
+import projectMoodWatch from "@/assets/projectMoodWatch.png";
+import projectUpwork from "@/assets/projectUpwork.png";
 
 interface Project {
   name: string;
@@ -26,55 +25,52 @@ interface Project {
   image: StaticImageData;
   link?: string;
   featured?: boolean;
+  github: string;
 }
 
 const projects: Project[] = [
   {
-    name: "E-Commerce Dashboard",
+    name: "MoodWatch",
     type: "frontend",
     featured: true,
     description:
-      "Real-time analytics dashboard for e-commerce platforms with interactive charts, live sales metrics, and dark-mode-first design.",
-    tech: ["React", "TypeScript", "TailwindCSS", "Recharts"],
-    image: projectDashboard,
-    link: "#",
+      "AI-powered movie recommendation app. Pick how you're feeling, describe your vibe, and get 5 movies tailored to your exact mood using Groq AI and TMDB.",
+    tech: ["Next.js", "TypeScript", "TailwindCSS", "Groq AI", "TMDB API"],
+    image: projectMoodWatch,
+    github: "https://github.com/NatnaelDemelash/MoodWatch",
+    link: "https://nd-moodwatch.vercel.app",
   },
   {
-    name: "SaaS Landing Builder",
+    name: "ExplainThisBug",
     type: "frontend",
     featured: true,
     description:
-      "Drag-and-drop landing page builder with 50+ pre-built blocks, live preview, and static HTML export for SaaS products.",
-    tech: ["Next.js", "TypeScript", "Framer Motion", "dnd-kit"],
-    image: projectLandingBuilder,
-    link: "#",
+      "Paste any error message. Get it explained like you're 5 years old or like a senior dev — with a real fix. Built for developers who hate confusing error messages.",
+    tech: ["Next.js", "TypeScript", "TailwindCSS", "Groq AI"],
+    image: projectExplainBug,
+    github: "https://github.com/NatnaelDemelash/ExplainThisBug-",
+    link: "https://explain-this-bug.vercel.app",
   },
   {
-    name: "Design System Kit",
+    name: "CronEase",
     type: "frontend",
+    featured: true,
     description:
-      "Production-ready component library with 40+ accessible components, full TypeScript support, and comprehensive Storybook docs.",
-    tech: ["React", "Storybook", "Radix UI", "TailwindCSS"],
-    image: projectDesignSystem,
-    link: "#",
+      "Developer tool that converts natural language into cron expressions — and explains cron expressions back into plain English. No more Googling cron syntax.",
+    tech: ["Next.js", "TypeScript", "TailwindCSS"],
+    image: projectCronEase,
+    github: "https://github.com/NatnaelDemelash/CronEase",
+    link: "https://cron-ease-beta.vercel.app",
   },
   {
-    name: "Lead Gen Automator",
+    name: "Upwork Job Alert",
     type: "automation",
     featured: true,
     description:
-      "End-to-end lead generation pipeline that scrapes, scores with AI, enriches with company data, and notifies via Slack.",
-    tech: ["n8n", "OpenAI", "Google Sheets", "Slack"],
-    image: projectLeadGen,
-    link: "#",
-  },
-  {
-    name: "Client Onboarding Flow",
-    type: "automation",
-    description:
-      "Automated onboarding that creates Notion workspaces, sends welcome emails, and generates Stripe invoices on contract signature.",
-    tech: ["n8n", "Notion", "Stripe", "Gmail"],
-    image: projectOnboarding,
+      "Automated Upwork job alert system that filters listings using Groq AI and sends matching jobs directly to Telegram. Zero subscription cost.",
+    tech: ["n8n", "Groq AI", "Llama 3.3", "Telegram API"],
+    image: projectUpwork,
+    github: "https://github.com/NatnaelDemelash/upwork-job-alert-n8n",
     link: "#",
   },
 ];
