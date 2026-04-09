@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import { ArrowUp, Github, Linkedin, Mail, Sparkles } from "lucide-react";
+import { ArrowUp, Github, Linkedin, Mail, Sparkles } from 'lucide-react';
 
 const ConnectSection = () => {
-  const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" });
+  const scrollToTop = () => window.scrollTo({ top: 0, behavior: 'smooth' });
 
   return (
     <section
@@ -163,7 +163,7 @@ const ConnectSection = () => {
                 </p>
                 <div className="mt-4 grid grid-cols-1 gap-2">
                   <a
-                    href="https://linkedin.com"
+                    href="https://www.linkedin.com/in/natnaeldemelash/"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-between rounded-2xl border border-border bg-background/60 px-4 py-3 text-sm font-semibold text-foreground shadow-sm transition hover:bg-background hover:text-primary"
